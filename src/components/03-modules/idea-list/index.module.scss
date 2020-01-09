@@ -1,0 +1,27 @@
+
+.idea-list {
+	background: purple;
+
+	.idea-list_ul {
+		list-style: none;
+
+		.idea-list_ul-item {
+			margin: 0 0 $spacing-full 0;
+		}
+	}
+}
+
+
+@media only screen and (min-width : $breakpoint-2){
+
+	.idea-list {
+
+		.idea-list_ul {
+			margin: 0 -$spacing-full;
+
+			.idea-list_ul-item {
+				margin: 0 $spacing-full $spacing-full $spacing-full;
+			}
+		}
+	}
+}

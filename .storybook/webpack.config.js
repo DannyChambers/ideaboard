@@ -1,5 +1,10 @@
+const path = require('path');
+
 module.exports = ({ config }) => ({
   ...config,
+  stats: {
+    logging: 'verbose'
+  },
   module: {
     ...config.module,
     rules: [
@@ -16,6 +21,34 @@ module.exports = ({ config }) => ({
         ],
         include: path.resolve(__dirname, "../")
       },
+      {
+        test: /\.(js|jsx)$/,
+        exclude: /node_modules/,
+        use:[
+          {
+            loader: require.resolve("babel-loader"),
+            options: {
+            presets: [["react-app", { flow: false, typescript: true }]]
+            }
+          }
+        ],
+        include: path.resolve(__dirname, "../")
+      },
+      {
+          test: /\.scss$/,
+          use: ['style-loader', 'css-loader', 'sass-loader',{
+                      loader: 'sass-resources-loader',
+                      options: {
+                          resources: [
+                              path.resolve(__dirname, '../src/components/00-tokens/fonts/_index.scss'),
+                              path.resolve(__dirname, '../src/components/00-tokens/reset/_index.scss'),
+                              path.resolve(__dirname, '../src/components/00-tokens/colours/_index.scss'),
+                              path.resolve(__dirname, '../src/components/00-tokens/dimensions/_index.scss')
+                          ]
+                      }
+                  }],
+          include: path.resolve(__dirname, '../'),
+        },
       {
         test: /\.css$/,
         use: [
@@ -57,3 +90,4 @@ module.exports = ({ config }) => ({
     ]
   }
 });
+

@@ -1,0 +1,33 @@
+
+/*-- #BREAKPOINTS ---------------------*/
+
+$breakpoint-1: 320px;// ~ x-small
+$breakpoint-2: 414px;// ~ small
+$breakpoint-3: 768px;// ~ medium
+$breakpoint-4: 1024px;// ~ large
+$breakpoint-5: 1200px;// ~ x-large
+
+$maximum-page-width: $breakpoint-5;
+
+/*-- #SPACING ---------------------*/
+
+$spacing-full: 20px;
+$spacing-half: 10px;
+$spacing-quarter: 5px;
+$spacing-eighth: 3px;
+$spacing-sixteenth: 1px;
+$spacing-double: 40px;
+$spacing-triple: 60px;
+$spacing-quadruple: 80px;
+
+
+/*-- #DIMENSION ---------------------*/
+
+$dimension-full: 40px;
+$dimension-half: 20px;
+$dimension-quarter: 10px;
+$dimension-eighth: 5px;
+$dimension-sixteenth: 3px;
+$dimension-double: 80px;
+$dimension-triple: 120px;
+$dimension-quadruple: 180px;

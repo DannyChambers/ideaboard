@@ -1,0 +1,19 @@
+
+.logo {
+	display: block;
+	width: 200px;
+	font-family: $font-family-heading;
+	font-size: 1.8rem;
+	text-align: center;
+	background: $background-colour-1;
+	border: 2px solid $text-colour-1;
+	margin: 0 auto;
+
+	a {
+		display: block;
+		width: 100%;
+		text-decoration: none;
+		padding: $spacing-half;
+		color: $text-colour-1;
+	}
+}
