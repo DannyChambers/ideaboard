@@ -1,12 +1,12 @@
 import React from 'react';
 import './App.scss';
 
-import H2 from "./components/01-arrangements/h2/index";
+import Home from "./components/04-pages/home/index";
 
 function App() {
   return (
     <div>
-    	<H2 text="Testing the Heading two" />
+    	<Home />
     </div>
   );
 }

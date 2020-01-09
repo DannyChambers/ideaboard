@@ -1,7 +1,23 @@
 
-.component {
+.text-input {
 	display: block;
-	width: 100px;
-	height: 80px;
-	background: pink;
+	width: 100%;
+	max-width: $breakpoint-2; 
+	padding: $spacing-quarter;
+	border: 1px solid $line-colour-1;
+	line-height: $dimension-full;
+	font-family: $font-family-regular;
+	height: $dimension-full;
+	-webkit-appearance: none;
+	background: $background-colour-1;
+	transition: border-color .3s ease-in-out;
+
+	&:hover {
+		border-color: $action-colour;
+	}
+
+	&:focus, &:active {
+		border-color: $active-colour;
+	}
 }
+

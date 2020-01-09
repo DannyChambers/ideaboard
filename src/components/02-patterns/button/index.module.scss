@@ -1,7 +1,99 @@
 
-.component {
-	display: block;
-	width: 100px;
-	height: 80px;
-	background: pink;
+$primary-button-background: $action-colour;
+$primary-button-background-hover: $active-colour;
+$primary-button-border: $action-colour;
+$primary-button-border-hover: $active-colour;
+$primary-button-colour: $text-colour-2;
+$primary-button-colour-hover: $text-colour-2;
+$primary-button-background-disabled: $text-colour-3;
+$primary-button-border-disabled: $brand-5;
+$primary-button-colour-disabled: $brand-3;
+
+$secondary-button-background: transparent;
+$secondary-button-background-hover: transparent;
+$secondary-button-border:  $text-colour-1;
+$secondary-button-border-hover: $action-colour;
+$secondary-button-colour: $text-colour-1;
+$secondary-button-colour-hover: $text-colour-1;
+$secondary-button-background-disabled: transparent;
+$secondary-button-border-disabled: $brand-5;
+$secondary-button-colour-disabled: $brand-5;
+
+.button {
+	display: inline-block;
+	background: $primary-button-background;
+	color: $primary-button-colour;
+	height: calc(#{$dimension-full} + 2px);
+	padding: 0 $spacing-full;
+	line-height: $dimension-full;
+	border: 2px solid $primary-button-border;
+	text-align: center;
+	white-space: nowrap;
+	font-family: $font-family-bold;
+	text-transform: uppercase;
+	text-decoration: none;
+	text-align: center;
+	cursor: pointer;
+	transition: all .4s ease-in-out;
+
+	&:hover {
+		background: lighten($primary-button-background, 10%);
+		border-color: lighten($primary-button-background, 10%);
+		color: $primary-button-colour-hover;
+	}
+
+	&.is-disabled {
+		background: $primary-button-background-disabled;
+		border: 2px solid $primary-button-border-disabled;
+		color: $primary-button-colour-disabled;
+		cursor: not-allowed;
+		pointer-events: none;
+
+		&:hover {
+			background: $primary-button-background-disabled;
+			color: $primary-button-colour-disabled;
+		}
+	}
+
+	&--secondary {
+		background-color: $secondary-button-background;
+		border: 2px solid $secondary-button-border;
+		color: $secondary-button-colour;
+
+		&:hover {
+			background-color: $secondary-button-background-hover;
+			border: 2px solid $secondary-button-border-hover;
+			color: $secondary-button-colour-hover;
+		}
+
+		&.is-disabled {
+			background: $secondary-button-background-disabled;
+			color: $secondary-button-colour-disabled;
+			cursor: not-allowed;
+			pointer-events: none;
+
+			&:hover {
+				background: $secondary-button-background-disabled;
+				color: $secondary-button-colour-disabled;
+			}
+		}
+	}
+
+	&--icononly {
+		background: none;
+		border: none;
+		padding: 0;
+		height: auto;
+		line-height: normal;
+
+		&:hover {
+			background: none;
+			border: none;	
+		}
+
+		.button_text {
+			display: none;
+		}
+	}
 }
+

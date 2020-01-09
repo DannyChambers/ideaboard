@@ -15,5 +15,9 @@
 		text-decoration: none;
 		padding: $spacing-half;
 		color: $text-colour-1;
+
+		&:hover {
+			text-decoration: none;
+		}
 	}
 }

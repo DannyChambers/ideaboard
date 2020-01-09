@@ -8,5 +8,5 @@ import H2 from "./index";
 
 storiesOf("Components/Arrangements/Heading two", module)
   .add("Default", () => (
-    <H2 text="This is a heading two" />
+    <H2 classes="" text="This is a heading two" />
   ));

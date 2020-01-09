@@ -7,16 +7,22 @@ import "./index.module.scss";
 export default class MetaList extends Component {
   render() {
 
-    //const { } = this.props;
+    const { created, updated } = this.props;
+
+    let createdVis = "hidden";
+
+    if(this.props.updated){
+
+      createdVis = "";
+
+    }
 
     return (
-      <div class="meta-list">
-
-        <p class="meta-list_title">Sort by:</p>
+      <div className="meta-list">
         
-        <ul class="meta-list_ul">
-          <li class="meta-list_item"><a href="#n">Date created</a></li>
-          <li class="meta-list_item"><a href="#n">Alphabetical</a></li>
+        <ul className="meta-list_ul">
+          <li className="meta-list_item">Created: {created}</li>
+          <li className={`${createdVis} meta-list_item`}>Updated: {updated}</li>
         </ul>
 
       </div>
@@ -25,9 +31,11 @@ export default class MetaList extends Component {
 }
 
 MetaList.propTypes = {
-
+  created: PropTypes.string.isRequired,
+  updated: PropTypes.string.isRequired,
 };
 
 MetaList.defaultProps = {
-
+  created: "",
+  updated: "",
 };

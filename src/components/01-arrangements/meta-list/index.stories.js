@@ -8,5 +8,5 @@ import MetaList from "./index";
 
 storiesOf("Components/Arrangements/Meta list", module)
   .add("Default", () => (
-    <MetaList/>
+    <MetaList created="07/01/2020" updated="09/01/2020" />
   ));

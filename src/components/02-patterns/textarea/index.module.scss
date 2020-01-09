@@ -1,7 +1,38 @@
 
-.component {
-	display: block;
-	width: 100px;
-	height: 80px;
-	background: pink;
+.textarea {
+
+	.input {
+		display: block;
+		width: calc(100% - 16px);
+		height: 30px;
+		max-width: calc(#{$breakpoint-2} - 16px); 
+		padding: $spacing-quarter;
+		font-family: $font-family-regular;
+		line-height: 30px;
+		-webkit-appearance: none;
+		background: $background-colour-1;
+		box-sizing: content-box;
+		resize: none;
+		overflow: hidden;
+
+		&:hover {
+
+		}
+
+		&:focus {
+
+			~ .charCount {
+				display: block;
+			}
+
+		}
+	}
+
+	.charCount {
+		display: none;
+		font-family: $font-family-regular;
+		font-size: 1rem;
+		text-align: right;
+	}
 }
+

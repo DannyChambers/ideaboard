@@ -7,7 +7,7 @@ import "./index.module.scss";
 export default class H2 extends Component {
   render() {
 
-    const { text } = this.props;
+    const { classes, text } = this.props;
 
     return (
       <h2 className={`h2 ${this.props.classes}`}>{text}</h2>
@@ -17,7 +17,7 @@ export default class H2 extends Component {
 }
 
 H2.propTypes = {
-  classes: PropTypes.string.isRequired,
+  classes: PropTypes.string,
   text: PropTypes.string.isRequired,
 };
 

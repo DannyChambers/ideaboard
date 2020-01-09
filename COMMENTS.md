@@ -17,12 +17,14 @@
 
 ### Tasks
 
-1. Wireframe a design in Figma to work out which components are needed. * (https://www.figma.com/file/R76xMh0NjOz9VXPQ1cVrFe/Untitled?node-id=0%3A1)
-2. Set up React project with Storybook *
-3. Set up component folders for RIC *
-4. List known components *
-5. Map data model
-6. Prototype components with tests
+1. Wireframe a design in Figma to work out which components are needed. (https://www.figma.com/file/R76xMh0NjOz9VXPQ1cVrFe/Untitled?node-id=0%3A1) COMPLETE
+2. Set up React project with Storybook COMPLETE
+3. Set up component folders for RIC COMPLETE
+4. List known components COMPLETE
+5. Map data model COMPLETE
+6. Prototype components with tests **************
+7. Set up local storage COMPLETE
+7. Deploy COMPLETE
 
 ___
 
@@ -62,4 +64,21 @@ ___
 ___
 
 ### Notes --
+
+There are definately bugs, sorry about that.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 

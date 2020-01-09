@@ -8,7 +8,7 @@ import "./index.module.scss";
 
 //Arrangements
 import Container from "../../01-arrangements/container/index";
-import MetaList from "../../01-arrangements/meta-list/index";
+import SortList from "../../01-arrangements/sort-list/index";
 
 //Patterns
 import Logo 	from "../../02-patterns/logo/index";
@@ -24,10 +24,10 @@ export default class AppHeader extends Component {
     //const {  } = this.props;
 
     return (
-      <div class="app-header">
+      <div className="app-header">
       	<Container>
 	        <Logo />
-	        <MetaList />
+	        <SortList />
         </Container>
       </div>
     );

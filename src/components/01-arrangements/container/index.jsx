@@ -10,7 +10,7 @@ export default class Container extends Component {
     const { text } = this.props;
 
     return (
-      <div class="container">
+      <div className="container">
 		{this.props.children}
       </div>
 

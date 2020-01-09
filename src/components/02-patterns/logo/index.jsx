@@ -10,7 +10,7 @@ export default class Button extends Component {
     //const { } = this.props;
 
     return (
-        <h1 class="logo">
+        <h1 className="logo">
           <a href="/">Ideaboard</a>
         </h1>
     );

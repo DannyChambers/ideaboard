@@ -3,7 +3,91 @@
 	display: block;
 	width: 280px;
 	height: 280px;
-	padding: $spacing-full;
+	padding: $spacing-double $spacing-full;
 	background: $pattern-pink-1;
-	box-shadow: 10px 10px 5px 0px rgba(0,0,0,0.5);;
+	box-shadow: 5px 5px 5px 0px rgba(0,0,0,0.5);
+	position: relative;
+
+	.button--icononly {
+		position: absolute;
+		top: $spacing-half;
+		right: $spacing-half;
+	}
+
+	.idea_title, .idea_description {
+		
+		.input {
+			border: none;
+			background: none;
+
+			&:focus {
+				background: rgba(255,255,255,.4);
+			}
+		}
+	}
+
+	.idea_title {
+
+		.input {
+			font-family: $font-family-script;
+			font-size: 2rem;
+			font-weight: bold;//naughty
+			margin-bottom: $spacing-half;
+			height: auto;
+
+			&:focus {
+
+				~ .charCount {
+					display: none;
+				}
+
+			}
+		}
+
+		.charCount {
+			display: none;
+		}
+	}
+
+	.idea_description {
+
+		.input {
+			font-size: 1rem;
+			line-height: normal;
+			margin-bottom: $spacing-half;
+		}
+
+		.charCount {
+			font-size: .7rem;
+		}
+	}
+
+	.meta-list {
+		width: calc(100% - #{$spacing-double});
+		position: absolute;
+		bottom: $spacing-half;
+		left: $spacing-full;
+	}
+
+	&.idea--new {
+		background: $pattern-green-1;
+
+		.idea_title, .idea_description {
+			
+			.input {
+				background: rgba(255,255,255,.4);
+			}
+		}
+
+		.button {
+			display: block;
+			max-width: 130px;
+			margin: $spacing-full auto;
+		}
+
+		.button--icononly, .meta-list {
+			display: none;
+		}
+		
+	}
 }
