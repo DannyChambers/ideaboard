@@ -70,7 +70,7 @@ const rootReducer = (state = initState, action) => {
 
 					}
 
-					idea.update = date;
+					idea.updated = date;
 
 				}
 
